@@ -38,7 +38,7 @@ function setTitle() {
     if (StateData.file_path)
         document.title = "Desmos - " + StateData.file_path;
     else
-        document.title = "Desmos - * Untitled";
+        document.title = "accessible Desmos desktop - * Untitled";
     ipcRenderer.send('renderer-request', {msg: 'TitleChanged', data: StateData.file_path});
 }
 
@@ -216,7 +216,7 @@ ipcRenderer.on('mainprocess-request', (event, arg) => {
 
 document.addEventListener("keydown", event => {
     switch (event.key) {
-        case "Escape":
+        case "Alt f4":
             if (remote.getCurrentWindow().isFullScreen()) {
                 remote.getCurrentWindow().setFullScreen(false);
             } else {
