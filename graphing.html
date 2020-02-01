@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Desmos</title>
+        <title>graphing calculator</title>
         <script src="https://www.desmos.com/api/v1.4/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
         <link rel="stylesheet" href="./src/css/style.css" type="text/css" />
     </head>
@@ -10,7 +10,8 @@
 
     <body>
         <h1>select type of calculator</h1>
-        <a href="scientific.html">scientific</a>
+        <a href="index.html">return to start page</a>
+        <a href="scientific.html">scientific calculator</a>
         <a href="graphing.html">graphing calculator</a>
         <div id="calculator"> </div>
 
@@ -19,4 +20,8 @@
     </body>
     <script src="./src/js/calculator.js"></script>
     <script src="./renderer.js"></script>
+    <script>
+        var elt = document.getElementById('calculator');
+        var calculator = Desmos.GraphingCalculator(elt);
+      </script>
 </html>

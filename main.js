@@ -1,11 +1,11 @@
-const {app, BrowserWindow, Menu, ipcMain} = require('electron');
+const {app, BrowserWindow, Menu,             ipcMain} = require('electron');
 const Store = require('electron-store');
 const path = require('path');
 const url = require('url');
 
 let safeExit = false;
 
-const store = new Store({
+const store = new Store ({
     defaults: {
         // 1000x600 is the default size of our window
         windowSize: [ 1000, 600 ],
@@ -15,7 +15,7 @@ const store = new Store({
 });
 
 
-function sendReq(msg, data=null) {
+function sendReq(   msg,     data=null) {
     win.webContents.send('mainprocess-request', {msg: msg, data: data});
 }
 
@@ -119,7 +119,7 @@ function createWindow() {
     let width = shape[0];
     let height = shape[1];
 
-    win = new BrowserWindow({width: width, height: height, x: x, y: y, icon: path.join(__dirname, '/res/icons/icon.png')});
+    win = new BrowserWindow({width: width, height: height, x: x, y: y, icon: path.join(__dirname, '/res/icons/icon.png')}); 
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
