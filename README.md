@@ -1,24 +1,18 @@
-# Desmos Desktop
+# Accessible Desmos Desktop
 
-[Desmos](https://www.desmos.com/about) is an advanced graphing calculator implemented as a web application and a mobile application written in JavaScript. Here is a very simple cross-platform desktop version. **Plotting, saving, opening and exporting offlinely** are supportive. Examples are in 'examples' folder.
+## introduction
+This application is a fork of DingShizhe's desmos desktop app[https://github.com/DingShizhe/Desmos-Desktop]. I made this bersion to be accessible for people who use assistive technology. This version is based on the desmos website [https://www.desmos.com/].
 
-[Desmos](https://www.desmos.com/about) 是一款优秀的、免费的在线数学函数计算器。它基于JavaScript，有在线版和手机版。这里是一个基于[Electron](http://electron.atom.io/)的**简单的离线桌面版**，可以离线绘制和保存以及输出截图。支持linux, Mac 和 Win平台(目前还没有在Mac上尝试，留下贫穷的眼泪...)。
+## credits
+The main base of this application was taken from DingShizhe's desmos desktop app[https://github.com/DingShizhe/Desmos-Desktop]. I also used the desmos api [https://www.desmos.com/api/]. Desmos is a web calculater written in javascript that can be used for graphing, scientific operations, and basic arithmitic. This app supports all the math operations that the desmos website supports.
 
-<img src="./res/app.png" width="600"/>
-
-## Install
-
-The executable binary files have been released  [here](https://github.com/DingShizhe/Desmos-Desktop/releases/tag/v1.0.0). There are only win and linux(ubuntu) versions. If you want Mac(or other platforms) version, try to build it.
-
-After installation, try to use it to open the `des` files in 'examples'.
-
-## Build
+## Build from source
+If you want to help with project by contributing code, it is most likely you will need to build the application from source. Below, you will find the instructions to build desmos from source.
 ```
-git clone https://github.com/DingShizhe/Desmos-Desktop.git
-cd Desmos-Desktop
+git clone [https://github.com/tayarndt/accessible-Desmos-Desktop.git]
 npm install -d
 npm run dist
-cd dist && ls   # WOW! Then move the package wherever you want. 
+run application
 ```
 On linux, you need edit ./res/appimagekit-desmos.desktop properly and move it to ./local/share/applications.
 
@@ -27,26 +21,14 @@ On linux, you need edit ./res/appimagekit-desmos.desktop properly and move it to
 - [Electron](http://electron.atom.io/)
 - [Desmos API](https://www.desmos.com/api/)
 
+## features
+- use scientific calculator
+- save desmos graphs to computer for later use
+- fully accessible with screen readers
+- audio tracing mode for auditory representation of graphs
+- can be used by all not just blind users
+- import graphs from other users
+- able to find important points on graphs
+- works when you are offline
 
-## Simple Functions (features) Now
-Now you can use this simple app to
-- Draw mathematical curves just like the web version
-- Export screenshot as `.png` file
-- Save or reload graph state as `.des` file (just json)
-- Fade out message effect.
-- Note when new a file or close file but current file hasnot been saved
-- Open the last opened file when launch
-- Use 'examples/getDesByUrl.py' to get `.des` file from desmos website
-  .
 
-## My Artworks (except the last one)
-
-Try open `.des` files in 'examples'.
-
-<img src="res/Cardioid.png" width="200"/> <img src="res/Folded Conic Section.png" width="200"/> <img src="res/Folded Conic Section2.png" width="200"/>
-
-<img src="res/Folded Conic Section3.png" width="200"/> <img src="res/Brain.png" width="200"/> <img src="res/Mobius2.png" width="200"/>
-
-<img src="res/Mobius.png" width="200"/> <img src="res/Astroid.png" width="200"/> <img src="res/Powerpuff Grils.png" width="200"/>
-
-Hope this helpful. Enjoy ;)
